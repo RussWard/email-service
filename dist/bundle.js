@@ -23209,7 +23209,7 @@ var _axios2 = _interopRequireDefault(_axios);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var sendMessage = exports.sendMessage = function sendMessage(form) {
-  _axios2.default.post('http://localhost:3030/sendMessage', form).then(function (response) {
+  _axios2.default.post('/sendMessage', form).then(function (response) {
     console.log(response);
   }).catch(function (e) {
     console.log(e);
