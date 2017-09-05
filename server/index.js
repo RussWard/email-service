@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const creds = require('../config.js');
 const sgMail = require('@sendgrid/mail');
 const aws = require('aws');
 
@@ -13,6 +12,10 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../dist')));
+
+try {
+  const creds = require('../config.js');
+} catch(e) {}
 
 app.post('/sendMessage', (req, res) => {
   console.log(req.body);
