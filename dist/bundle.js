@@ -9827,43 +9827,77 @@ var App = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'form',
-        { onSubmit: this.handleSubmit },
+        'div',
+        null,
         _react2.default.createElement(
-          'div',
+          'h1',
           null,
-          _react2.default.createElement(
-            'label',
-            null,
-            'Subject:'
-          ),
-          _react2.default.createElement('input', { value: this.state.subject, onChange: this.handleSubject })
+          'Russ Ward\'s Sample Email Service'
         ),
         _react2.default.createElement(
-          'div',
-          null,
+          'form',
+          { className: 'email-form', onSubmit: this.handleSubmit },
           _react2.default.createElement(
-            'label',
-            null,
-            'Recipients Email:'
-          ),
-          _react2.default.createElement('input', { value: this.state.recipientEmail, onChange: this.handleRecipient })
-        ),
-        _react2.default.createElement(
-          'div',
-          null,
-          _react2.default.createElement(
-            'label',
-            null,
-            'Message:'
+            'div',
+            { className: 'row' },
+            _react2.default.createElement(
+              'h3',
+              null,
+              'Send kind, interesting, and in no way spammy or unwanted emails from russ@russandkaren.world'
+            )
           ),
           _react2.default.createElement(
             'div',
-            null,
-            _react2.default.createElement('textarea', { value: this.state.message, onChange: this.handleMessage })
-          )
-        ),
-        _react2.default.createElement('input', { type: 'submit', value: 'Submit' })
+            { className: 'row' },
+            _react2.default.createElement(
+              'div',
+              { className: 'col span-1-of-3' },
+              _react2.default.createElement(
+                'label',
+                null,
+                'Subject:'
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'col span-2-of-3' },
+              _react2.default.createElement('input', { type: 'text', value: this.state.subject, onChange: this.handleSubject })
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'row' },
+            _react2.default.createElement(
+              'div',
+              { className: 'col span-1-of-3' },
+              _react2.default.createElement(
+                'label',
+                null,
+                'Recipients Email:'
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'col span-2-of-3' },
+              _react2.default.createElement('input', { type: 'email', value: this.state.recipientEmail, onChange: this.handleRecipient })
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'row' },
+            _react2.default.createElement(
+              'label',
+              null,
+              'Message:'
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'row' },
+              _react2.default.createElement('textarea', { value: this.state.message, onChange: this.handleMessage })
+            )
+          ),
+          _react2.default.createElement('input', { type: 'submit', value: 'Send' })
+        )
       );
     }
   }]);

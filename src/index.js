@@ -56,29 +56,44 @@ class App extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <div>
-          <label>
-            Subject:
-          </label>
-          <input value={this.state.subject} onChange={this.handleSubject}/>
+      <div>
+        <h1>Russ Ward's Sample Email Service</h1>
+        
+        <form className="email-form" onSubmit={this.handleSubmit}>
+          <div className="row"> 
+          <h3>Send kind, interesting, and in no way spammy or unwanted emails from russ@russandkaren.world</h3>
         </div>
-        <div>
-          <label>
-            Recipients Email:
-          </label>
-          <input value={this.state.recipientEmail} onChange={this.handleRecipient}/>
-        </div>
-        <div>
-          <label>
-            Message:
-          </label>
-          <div>
-            <textarea value={this.state.message} onChange={this.handleMessage}/>
+          <div className="row">
+            <div className="col span-1-of-3">
+              <label>
+                Subject:
+              </label>
+            </div>
+            <div className="col span-2-of-3">
+              <input type="text" value={this.state.subject} onChange={this.handleSubject}/>
+            </div>
           </div>
-        </div>
-        <input type="submit" value="Submit" />
-      </form>
+          <div className="row">
+            <div className="col span-1-of-3">
+              <label>
+                Recipients Email:
+              </label>
+            </div>
+            <div className="col span-2-of-3">
+              <input type="email" value={this.state.recipientEmail} onChange={this.handleRecipient}/>
+            </div>
+          </div>
+          <div className="row">
+            <label>
+              Message:
+            </label>
+            <div className="row">
+              <textarea value={this.state.message} onChange={this.handleMessage}/>
+            </div>
+          </div>
+          <input type="submit" value="Send" />
+        </form>
+      </div>
     )
   }
 };
