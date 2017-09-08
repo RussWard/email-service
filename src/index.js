@@ -7,14 +7,14 @@ class App extends React.Component {
     super(props);
     this.state = {
       name: '',
-      senderEmail: '',
+      subject: '',
       recipientEmail: '',
       message: ''
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleName = this.handleName.bind(this);
-    this.handleSender = this.handleSender.bind(this);
+    this.handleSubject = this.handleSubject.bind(this);
     this.handleRecipient = this.handleRecipient.bind(this);
     this.handleMessage = this.handleMessage.bind(this);
   }
@@ -25,9 +25,9 @@ class App extends React.Component {
     });
   }
 
-  handleSender(event) {
+  handleSubject(event) {
     this.setState({
-      senderEmail: event.target.value
+      subject: event.target.value
     });
   }
 
@@ -59,8 +59,8 @@ class App extends React.Component {
         </div>
         <div>
           <label>
-            Senders Email:
-            <input value={this.state.sendersEmail} onChange={this.handleSender}/>
+            Subject:
+            <input value={this.state.subject} onChange={this.handleSubject}/>
           </label>
         </div>
         <div>

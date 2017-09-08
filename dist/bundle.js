@@ -9770,14 +9770,14 @@ var App = function (_React$Component) {
 
     _this.state = {
       name: '',
-      senderEmail: '',
+      subject: '',
       recipientEmail: '',
       message: ''
     };
 
     _this.handleSubmit = _this.handleSubmit.bind(_this);
     _this.handleName = _this.handleName.bind(_this);
-    _this.handleSender = _this.handleSender.bind(_this);
+    _this.handleSubject = _this.handleSubject.bind(_this);
     _this.handleRecipient = _this.handleRecipient.bind(_this);
     _this.handleMessage = _this.handleMessage.bind(_this);
     return _this;
@@ -9791,10 +9791,10 @@ var App = function (_React$Component) {
       });
     }
   }, {
-    key: 'handleSender',
-    value: function handleSender(event) {
+    key: 'handleSubject',
+    value: function handleSubject(event) {
       this.setState({
-        senderEmail: event.target.value
+        subject: event.target.value
       });
     }
   }, {
@@ -9839,8 +9839,8 @@ var App = function (_React$Component) {
           _react2.default.createElement(
             'label',
             null,
-            'Senders Email:',
-            _react2.default.createElement('input', { value: this.state.sendersEmail, onChange: this.handleSender })
+            'Subject:',
+            _react2.default.createElement('input', { value: this.state.subject, onChange: this.handleSubject })
           )
         ),
         _react2.default.createElement(
