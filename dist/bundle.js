@@ -9816,6 +9816,12 @@ var App = function (_React$Component) {
     value: function handleSubmit(event) {
       (0, _helpers.sendMessage)(this.state);
       event.preventDefault();
+      this.setState({
+        name: '',
+        subject: '',
+        recipientEmail: '',
+        message: ''
+      });
     }
   }, {
     key: 'render',
@@ -9829,9 +9835,9 @@ var App = function (_React$Component) {
           _react2.default.createElement(
             'label',
             null,
-            'Name:',
-            _react2.default.createElement('input', { value: this.state.name, onChange: this.handleName })
-          )
+            'Subject:'
+          ),
+          _react2.default.createElement('input', { value: this.state.subject, onChange: this.handleSubject })
         ),
         _react2.default.createElement(
           'div',
@@ -9839,9 +9845,9 @@ var App = function (_React$Component) {
           _react2.default.createElement(
             'label',
             null,
-            'Subject:',
-            _react2.default.createElement('input', { value: this.state.subject, onChange: this.handleSubject })
-          )
+            'Recipients Email:'
+          ),
+          _react2.default.createElement('input', { value: this.state.recipientEmail, onChange: this.handleRecipient })
         ),
         _react2.default.createElement(
           'div',
@@ -9849,17 +9855,11 @@ var App = function (_React$Component) {
           _react2.default.createElement(
             'label',
             null,
-            'Recipients Email:',
-            _react2.default.createElement('input', { value: this.state.recipientEmail, onChange: this.handleRecipient })
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          null,
+            'Message:'
+          ),
           _react2.default.createElement(
-            'label',
+            'div',
             null,
-            'Message:',
             _react2.default.createElement('textarea', { value: this.state.message, onChange: this.handleMessage })
           )
         ),

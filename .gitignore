@@ -1,6 +1,4 @@
 /node_modules/
 /dist/bundle.js
 /dist/bundle.js.map
-config.js
-sendgrid.env
 .env

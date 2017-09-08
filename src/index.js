@@ -46,6 +46,12 @@ class App extends React.Component {
   handleSubmit(event) {
     sendMessage(this.state);
     event.preventDefault();
+    this.setState({
+      name: '',
+      subject: '',
+      recipientEmail: '',
+      message: ''
+    })
   }
 
   render() {
@@ -53,27 +59,23 @@ class App extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <div>
           <label>
-            Name:
-            <input value={this.state.name} onChange={this.handleName}/>
-          </label>
-        </div>
-        <div>
-          <label>
             Subject:
-            <input value={this.state.subject} onChange={this.handleSubject}/>
           </label>
+          <input value={this.state.subject} onChange={this.handleSubject}/>
         </div>
         <div>
           <label>
             Recipients Email:
-            <input value={this.state.recipientEmail} onChange={this.handleRecipient}/>
           </label>
+          <input value={this.state.recipientEmail} onChange={this.handleRecipient}/>
         </div>
         <div>
           <label>
             Message:
-            <textarea value={this.state.message} onChange={this.handleMessage}/>
           </label>
+          <div>
+            <textarea value={this.state.message} onChange={this.handleMessage}/>
+          </div>
         </div>
         <input type="submit" value="Submit" />
       </form>
