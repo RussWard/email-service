@@ -9843,7 +9843,7 @@ var App = function (_React$Component) {
             _react2.default.createElement(
               'h3',
               null,
-              'Send kind, interesting, and in no way spammy or unwanted emails from russ@russandkaren.world'
+              'Send kind, interesting, and in no way spammy or unwanted emails'
             )
           ),
           _react2.default.createElement(
@@ -9861,7 +9861,7 @@ var App = function (_React$Component) {
             _react2.default.createElement(
               'div',
               { className: 'col span-2-of-3' },
-              _react2.default.createElement('input', { type: 'text', value: this.state.subject, onChange: this.handleSubject })
+              _react2.default.createElement('input', { type: 'text', value: this.state.subject, onChange: this.handleSubject, placeholder: 'ex. Hiring Russ Ward' })
             )
           ),
           _react2.default.createElement(
@@ -9879,7 +9879,7 @@ var App = function (_React$Component) {
             _react2.default.createElement(
               'div',
               { className: 'col span-2-of-3' },
-              _react2.default.createElement('input', { type: 'email', value: this.state.recipientEmail, onChange: this.handleRecipient })
+              _react2.default.createElement('input', { type: 'email', value: this.state.recipientEmail, onChange: this.handleRecipient, placeholder: 'ex. hiringmanager@yourcompany.com' })
             )
           ),
           _react2.default.createElement(
@@ -9893,7 +9893,7 @@ var App = function (_React$Component) {
             _react2.default.createElement(
               'div',
               { className: 'row' },
-              _react2.default.createElement('textarea', { value: this.state.message, onChange: this.handleMessage })
+              _react2.default.createElement('textarea', { value: this.state.message, onChange: this.handleMessage, placeholder: 'ex. This Russ Ward guy is awesome!  Lets hire him before someone else does.' })
             )
           ),
           _react2.default.createElement('input', { type: 'submit', value: 'Send' })

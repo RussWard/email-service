@@ -61,7 +61,7 @@ class App extends React.Component {
         
         <form className="email-form" onSubmit={this.handleSubmit}>
           <div className="row"> 
-          <h3>Send kind, interesting, and in no way spammy or unwanted emails from russ@russandkaren.world</h3>
+          <h3>Send kind, interesting, and in no way spammy or unwanted emails</h3>
         </div>
           <div className="row">
             <div className="col span-1-of-3">
@@ -70,7 +70,7 @@ class App extends React.Component {
               </label>
             </div>
             <div className="col span-2-of-3">
-              <input type="text" value={this.state.subject} onChange={this.handleSubject}/>
+              <input type="text" value={this.state.subject} onChange={this.handleSubject} placeholder="ex. Hiring Russ Ward"/>
             </div>
           </div>
           <div className="row">
@@ -80,7 +80,7 @@ class App extends React.Component {
               </label>
             </div>
             <div className="col span-2-of-3">
-              <input type="email" value={this.state.recipientEmail} onChange={this.handleRecipient}/>
+              <input type="email" value={this.state.recipientEmail} onChange={this.handleRecipient} placeholder="ex. hiringmanager@yourcompany.com"/>
             </div>
           </div>
           <div className="row">
@@ -88,7 +88,7 @@ class App extends React.Component {
               Message:
             </label>
             <div className="row">
-              <textarea value={this.state.message} onChange={this.handleMessage}/>
+              <textarea value={this.state.message} onChange={this.handleMessage} placeholder="ex. This Russ Ward guy is awesome!  Lets hire him before someone else does."/>
             </div>
           </div>
           <input type="submit" value="Send" />
