@@ -9776,12 +9776,13 @@ var App = function (_React$Component) {
       password: ''
     };
     _this.handlePassword = _this.handlePassword.bind(_this);
+
     return _this;
   }
 
   _createClass(App, [{
-    key: 'componentdidMount',
-    value: function componentdidMount() {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
       console.log(this.state.password);
     }
   }, {
