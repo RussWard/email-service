@@ -9750,6 +9750,10 @@ var _reactDom = __webpack_require__(98);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _emailForm = __webpack_require__(211);
+
+var _emailForm2 = _interopRequireDefault(_emailForm);
+
 var _helpers = __webpack_require__(191);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -9769,134 +9773,34 @@ var App = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
     _this.state = {
-      name: '',
-      subject: '',
-      recipientEmail: '',
-      message: ''
+      password: ''
     };
-
-    _this.handleSubmit = _this.handleSubmit.bind(_this);
-    _this.handleName = _this.handleName.bind(_this);
-    _this.handleSubject = _this.handleSubject.bind(_this);
-    _this.handleRecipient = _this.handleRecipient.bind(_this);
-    _this.handleMessage = _this.handleMessage.bind(_this);
+    _this.handlePassword = _this.handlePassword.bind(_this);
     return _this;
   }
 
   _createClass(App, [{
-    key: 'handleName',
-    value: function handleName(event) {
+    key: 'handlePassword',
+    value: function handlePassword(event) {
       this.setState({
-        name: event.target.value
-      });
-    }
-  }, {
-    key: 'handleSubject',
-    value: function handleSubject(event) {
-      this.setState({
-        subject: event.target.value
-      });
-    }
-  }, {
-    key: 'handleRecipient',
-    value: function handleRecipient(event) {
-      this.setState({
-        recipientEmail: event.target.value
-      });
-    }
-  }, {
-    key: 'handleMessage',
-    value: function handleMessage(event) {
-      this.setState({
-        message: event.target.value
-      });
-    }
-  }, {
-    key: 'handleSubmit',
-    value: function handleSubmit(event) {
-      (0, _helpers.sendMessage)(this.state);
-      event.preventDefault();
-      this.setState({
-        name: '',
-        subject: '',
-        recipientEmail: '',
-        message: ''
+        password: event.target.value
       });
     }
   }, {
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(
+      return this.state.password === 'kohactive' ? _react2.default.createElement(_emailForm2.default, null) : _react2.default.createElement(
         'div',
         null,
         _react2.default.createElement(
           'h1',
           null,
-          'Russ Ward\'s Sample Email Service'
+          'please enter password'
         ),
         _react2.default.createElement(
-          'form',
-          { className: 'email-form', onSubmit: this.handleSubmit },
-          _react2.default.createElement(
-            'div',
-            { className: 'row' },
-            _react2.default.createElement(
-              'h3',
-              null,
-              'Send kind, interesting, and in no way spammy or unwanted emails from russ@russandkaren.world'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'row' },
-            _react2.default.createElement(
-              'div',
-              { className: 'col span-1-of-3' },
-              _react2.default.createElement(
-                'label',
-                null,
-                'Subject:'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col span-2-of-3' },
-              _react2.default.createElement('input', { type: 'text', value: this.state.subject, onChange: this.handleSubject })
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'row' },
-            _react2.default.createElement(
-              'div',
-              { className: 'col span-1-of-3' },
-              _react2.default.createElement(
-                'label',
-                null,
-                'Recipients Email:'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'col span-2-of-3' },
-              _react2.default.createElement('input', { type: 'email', value: this.state.recipientEmail, onChange: this.handleRecipient })
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'row' },
-            _react2.default.createElement(
-              'label',
-              null,
-              'Message:'
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'row' },
-              _react2.default.createElement('textarea', { value: this.state.message, onChange: this.handleMessage })
-            )
-          ),
-          _react2.default.createElement('input', { type: 'submit', value: 'Send' })
+          'div',
+          { className: 'pw-form' },
+          _react2.default.createElement('input', { className: 'row pw-form', type: 'text', value: this.state.password, onChange: this.handlePassword })
         )
       );
     }
@@ -24123,6 +24027,182 @@ module.exports = function spread(callback) {
   };
 };
 
+
+/***/ }),
+/* 211 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(82);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _helpers = __webpack_require__(191);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var EmailForm = function (_React$Component) {
+  _inherits(EmailForm, _React$Component);
+
+  function EmailForm(props) {
+    _classCallCheck(this, EmailForm);
+
+    var _this = _possibleConstructorReturn(this, (EmailForm.__proto__ || Object.getPrototypeOf(EmailForm)).call(this, props));
+
+    _this.state = {
+      name: '',
+      subject: '',
+      recipientEmail: '',
+      message: ''
+    };
+
+    _this.handleSubmit = _this.handleSubmit.bind(_this);
+    _this.handleName = _this.handleName.bind(_this);
+    _this.handleSubject = _this.handleSubject.bind(_this);
+    _this.handleRecipient = _this.handleRecipient.bind(_this);
+    _this.handleMessage = _this.handleMessage.bind(_this);
+    return _this;
+  }
+
+  _createClass(EmailForm, [{
+    key: 'handleName',
+    value: function handleName(event) {
+      this.setState({
+        name: event.target.value
+      });
+    }
+  }, {
+    key: 'handleSubject',
+    value: function handleSubject(event) {
+      this.setState({
+        subject: event.target.value
+      });
+    }
+  }, {
+    key: 'handleRecipient',
+    value: function handleRecipient(event) {
+      this.setState({
+        recipientEmail: event.target.value
+      });
+    }
+  }, {
+    key: 'handleMessage',
+    value: function handleMessage(event) {
+      this.setState({
+        message: event.target.value
+      });
+    }
+  }, {
+    key: 'handleSubmit',
+    value: function handleSubmit(event) {
+      (0, _helpers.sendMessage)(this.state);
+      event.preventDefault();
+      this.setState({
+        name: '',
+        subject: '',
+        recipientEmail: '',
+        message: ''
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'h1',
+          null,
+          'Russ Ward\'s Sample Email Service'
+        ),
+        _react2.default.createElement(
+          'form',
+          { className: 'email-form', onSubmit: this.handleSubmit },
+          _react2.default.createElement(
+            'div',
+            { className: 'row' },
+            _react2.default.createElement(
+              'h3',
+              null,
+              'Send kind, interesting, and in no way spammy or unwanted emails'
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'row' },
+            _react2.default.createElement(
+              'div',
+              { className: 'col span-1-of-3' },
+              _react2.default.createElement(
+                'label',
+                null,
+                'Subject:'
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'col span-2-of-3' },
+              _react2.default.createElement('input', { type: 'text', value: this.state.subject, onChange: this.handleSubject, placeholder: 'ex. Hiring Russ Ward', required: true })
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'row' },
+            _react2.default.createElement(
+              'div',
+              { className: 'col span-1-of-3' },
+              _react2.default.createElement(
+                'label',
+                null,
+                'Recipients Email:'
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'col span-2-of-3' },
+              _react2.default.createElement('input', { type: 'email', value: this.state.recipientEmail, onChange: this.handleRecipient, placeholder: 'ex. hiringmanager@yourcompany.com', required: true })
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'row' },
+            _react2.default.createElement(
+              'label',
+              null,
+              'Message:'
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'row' },
+              _react2.default.createElement('textarea', { value: this.state.message, onChange: this.handleMessage, placeholder: 'ex. This Russ Ward guy is awesome!  Lets hire him before someone else does.', required: true })
+            )
+          ),
+          _react2.default.createElement('input', { type: 'submit', value: 'Send' })
+        )
+      );
+    }
+  }]);
+
+  return EmailForm;
+}(_react2.default.Component);
+
+;
+
+exports.default = EmailForm;
 
 /***/ })
 /******/ ]);

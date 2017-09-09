@@ -40,7 +40,8 @@ h1, h3 {
   text-align: center;
 }
 
-.email-form {
+.email-form,
+.pw-form {
   width: 50%;
   margin: 0 auto;
   float: center;
