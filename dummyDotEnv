@@ -1,0 +1,7 @@
+//place your environment variables in a .gitignored version of this file titled .env 
+
+SPARKPOST_API_KEY=
+SES_KEY=
+SES_SECRET=
+VERIFIED_SPARKPOST_EMAIL=
+VERIFIED_AWS_EMAIL=

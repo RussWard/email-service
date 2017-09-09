@@ -13,6 +13,6 @@
 
 - To run:
   * After cloning the repo and inputing envirnment variables, in the console run the following commands:
-     npm install
-     npm run build
-     npm run start
+     - npm install, 
+     - npm run build, 
+     - npm run start, 
