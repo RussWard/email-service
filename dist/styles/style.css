@@ -47,7 +47,12 @@ h1, h3 {
   float: center;
 }
 
+label {
+  padding: 0, 0, 10px 0;
+}
+
 textarea {
+  margin-top: 10px;
   height: 100px;
 }
 
