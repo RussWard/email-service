@@ -12,6 +12,10 @@ class App extends React.Component {
     this.handlePassword = this.handlePassword.bind(this);
   }
 
+  componentdidMount() {
+    console.log(this.state.password)
+  }
+
   handlePassword(event) {
     this.setState({
       password: event.target.value
