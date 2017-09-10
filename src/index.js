@@ -70,7 +70,7 @@ class App extends React.Component {
               </label>
             </div>
             <div className="col span-2-of-3">
-              <input type="text" value={this.state.subject} onChange={this.handleSubject} placeholder="ex. Hiring Russ Ward"/>
+              <input type="text" value={this.state.subject} onChange={this.handleSubject} placeholder="ex. Hiring Russ Ward" required/>
             </div>
           </div>
           <div className="row">
@@ -80,7 +80,7 @@ class App extends React.Component {
               </label>
             </div>
             <div className="col span-2-of-3">
-              <input type="email" value={this.state.recipientEmail} onChange={this.handleRecipient} placeholder="ex. hiringmanager@yourcompany.com"/>
+              <input type="email" value={this.state.recipientEmail} onChange={this.handleRecipient} placeholder="ex. hiringmanager@yourcompany.com" required/>
             </div>
           </div>
           <div className="row">
@@ -88,7 +88,7 @@ class App extends React.Component {
               Message:
             </label>
             <div className="row">
-              <textarea value={this.state.message} onChange={this.handleMessage} placeholder="ex. This Russ Ward guy is awesome!  Lets hire him before someone else does."/>
+              <textarea value={this.state.message} onChange={this.handleMessage} placeholder="ex. This Russ Ward guy is awesome!  Lets hire him before someone else does." required/>
             </div>
           </div>
           <input type="submit" value="Send" />
